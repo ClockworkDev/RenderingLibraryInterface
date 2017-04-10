@@ -3,6 +3,7 @@ var RenderingLibrary = (function () {
     //Here is where you should put all your rendering code, which will be private
 
     //And these are the public functions that the engine will use to talk to your library
+    //You can leave the ones that aren't relevant for your implementation empty, and even send a warning via the debug handler
     return {
         setUp: function (canvas, nfps) {
             //This function receives a reference to a canvaselement and the number of fps requested
@@ -95,6 +96,13 @@ var RenderingLibrary = (function () {
         },
         debug: function (handler) {
             //Turns the debug mode ON and sets a handler that will be used to log all the errors that happen.
+            //The handler will be called like this: 'handler("Something happened");' to display warnings and errors
+        },
+        setWorkingFolder: function (folder) {
+            //Sets the path from which assets should be loaded
+        },
+        getWorkingFolder: function () {
+            //Returns the working folder
         }
     };
 });
