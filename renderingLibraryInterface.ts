@@ -1,6 +1,6 @@
 type RenderingContext = CanvasRenderingContext2D | WebGLRenderingContext;
 
-interface RenderingLibrary {
+export default interface RenderingLibrary {
     //Global control functions
     setUp: (canvas: HTMLCanvasElement, framesPerSecon: number) => void;
     pauseAll: () => void;
