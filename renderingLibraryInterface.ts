@@ -2,10 +2,10 @@ type RenderingContext = CanvasRenderingContext2D | WebGLRenderingContext;
 
 export default interface RenderingLibrary {
     //Global control functions
-    setUp: (canvas: HTMLCanvasElement, framesPerSecon: number) => void;
+    setUp: (canvas: HTMLCanvasElement, framesPerSecond: number) => void;
     pauseAll: () => void;
     restart: () => void;
-    setBufferSize: (width: number, height: number) => null;
+    setBufferSize: (width: number, height: number) => void;
     setRenderMode: (renderMode: (sourceRenderingContext: RenderingContext, targetRenderingContext: RenderingContext) => void) => void;
     getContext: () => RenderingContext;
     chainWith: (renderingLibrary:RenderingLibrary) => void;
